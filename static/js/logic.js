@@ -33,7 +33,7 @@ function pointToCircle(point, latlng){
 
 // Create a popup on each feature
 function bindPopup(geo_feature, layer){
-    layer.bindPopup(geo_feature['properties']['title']);
+    layer.bindPopup(`Location: ${geo_feature.properties.place} <br> Magnitude: ${geo_feature.properties.mag} <br> Depth: ${geo_feature.geometry.coordinates[2]}`);
 };
 
 // Use the USGS link to get the GeoJSON data (for Significant earthquakes in the last 30 days) 
